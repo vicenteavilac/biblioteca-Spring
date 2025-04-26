@@ -1,0 +1,14 @@
+package cl.detoxnow.Librery;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+class LibreryApplication {
+
+	public static void main(String[] args) { SpringApplication.run(LibreryApplication.class, args); }
+	
+
+}
+
+
