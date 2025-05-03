@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-LibreryApplication<Librery>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "cl.detoxnow.Librery.LibreryApplication",
+            "projectName": "Librery",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
