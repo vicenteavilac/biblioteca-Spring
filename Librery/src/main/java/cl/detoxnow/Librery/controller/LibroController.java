@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import org.springframework.web.bind.annotation.GetMapping;
+
 
 @RestController
 @RequestMapping("/api/libros")
@@ -38,4 +40,10 @@ public class LibroController {
     public String eliminarLibro(@PathVariable int id) {
         return libroService.deleteLibro(id);
     }
+
+    @GetMapping("/total")
+    public int totalLibrosV2() {
+        return libroService.totalLibrosV2();
+    }
+    
 }
