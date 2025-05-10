@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import org.springframework.web.bind.annotation.GetMapping;
 
 
 @RestController
@@ -18,7 +17,7 @@ public class LibroController {
 
     @GetMapping
     public List<Libro> listarLibros() {
-        return libroService.obtenerLibros();
+        return libroService.listaLibros();
     }
     
     @PostMapping
@@ -28,17 +27,18 @@ public class LibroController {
 
     @GetMapping("/{id}")
     public Libro buscarLibro(@PathVariable int id) {
-        return libroService.getLibroId(id);
+        return libroService.GetLibroById(id);
     }
 
     @PutMapping("/{id}")
     public Libro actualizarLibro(@PathVariable int id, @RequestBody Libro libro) {
-        return libroService.updateLibro(libro);
+        return libroService.saveLibro(libro);
     }
 
     @DeleteMapping("/{id}")
     public String eliminarLibro(@PathVariable int id) {
-        return libroService.deleteLibro(id);
+        libroService.deleteLibro(id);
+        return "Libro eliminado exitosamente";
     }
 
     @GetMapping("/total")
